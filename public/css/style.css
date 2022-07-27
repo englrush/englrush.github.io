@@ -205,7 +205,7 @@ body {
   margin: 0 auto;
   background-color: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 20px 25px 135px 55px;
+  padding: 15px 40px 135px 40px;
 }
 .edit-part__title {
   font-weight: 700;
@@ -213,6 +213,7 @@ body {
   line-height: 57px;
   text-align: center;
   color: #000000;
+  margin-bottom: 20px;
 }
 .edit-part__box {
   display: grid;
@@ -268,6 +269,12 @@ body {
   color: #FFFFFF;
   gap: 5px;
   margin-bottom: 26px;
+  color: #747373;
+}
+
+.input-theme {
+  display: block;
+  background-color: grey;
 }
 
 .bin-link {
