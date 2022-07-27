@@ -38,14 +38,29 @@ body {
 .menu__link:nth-child(1), .menu__link:nth-child(4) {
   color: #F6008F;
   border: 3px solid #F6008F;
+  transition: all 0.3s;
+}
+.menu__link:nth-child(1):hover, .menu__link:nth-child(4):hover {
+  background-color: #f6008f;
+  color: #fff;
 }
 .menu__link:nth-child(2), .menu__link:nth-child(5) {
   color: #31DF01;
   border: 3px solid #31DF01;
+  transition: all 0.3s;
+}
+.menu__link:nth-child(2):hover, .menu__link:nth-child(5):hover {
+  background-color: #31DF01;
+  color: #fff;
 }
 .menu__link:nth-child(3), .menu__link:nth-child(6) {
   color: #39A0ED;
   border: 3px solid #39A0ED;
+  transition: all 0.3s;
+}
+.menu__link:nth-child(3):hover, .menu__link:nth-child(6):hover {
+  background-color: #39A0ED;
+  color: #fff;
 }
 
 .login__btn {
