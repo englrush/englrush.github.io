@@ -271,6 +271,7 @@ body {
 .bin-link {
   margin-left: auto;
   margin-bottom: 18px;
+  border: none;
 }
 
 .submit-btns {
