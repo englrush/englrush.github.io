@@ -255,9 +255,10 @@ body{
         margin-bottom: 15px;
         border: none;
         background-color: #F3ECEA;
-        &:focus{
-            color: #fff;
-        }
+        font-size: 14px;
+        line-height: 18px;
+        
+        color: #747373;
     }
 }
 .grid-item{
@@ -276,6 +277,11 @@ body{
         background-color: #112639;
         border: 1px solid #fff;
         margin-bottom: 16px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 57px;
+        color: #fff;
     }
 }
 .radio-inputs{
@@ -314,9 +320,12 @@ body{
     margin-left: 10px;
     margin-top: 10px;
     border: 1px solid #fff;
-}
-.submit-btn-2{
-
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
 }
 .submit-button{
     width: 120px;
@@ -368,7 +377,7 @@ body{
 
 
 
-
+// responsive
 
 
 @media(max-width:1405px){
