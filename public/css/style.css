@@ -274,6 +274,11 @@ body {
   margin-left: auto;
   margin-bottom: 18px;
   border: none;
+  border-radius: 100%;
+}
+
+.bin-img {
+  border: none;
 }
 
 .submit-btns {
