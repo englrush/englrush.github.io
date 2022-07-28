@@ -9,14 +9,14 @@ body{
 
 .header {
 
-    margin-bottom: 97px;
+    margin-bottom: 100px;
 
     &__inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
         height: 60px;
-        padding: 10px 65px;
+        padding: 0 65px;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         background-color: #fff;
         position: fixed;
@@ -177,7 +177,7 @@ body{
     background-color: #F6008F;
 }
 .container {
-    max-width: 1330px;
+    max-width: 1360px;
     margin: 0 auto;
 }
 
@@ -311,7 +311,7 @@ body{
     color: #FFFFFF;
     gap: 5px;
     margin-bottom: 26px;
-    color: #747373;
+    color: #F3ECEA;
     
 }
 .input-theme{
@@ -373,6 +373,8 @@ body{
         color: #112639;
     }
 }
+
+
 
 
 
