@@ -1,0 +1,15 @@
+<%- include('partials/head') %>
+    <%- include('partials/header') %>
+        <section class="edit-part">
+            <div class="edit-part__inner">
+                <h2 class="edit-part__title"><%= title %></h2>
+                <div class="edit-part__box">
+                    <% for (let i = 0; i < panels.length; i++) { %>
+                        <a href="edit-<%= panels[i] %>"><div class="edit-part__box">
+                            <h2 class="grid-box__title" style="background-color: <%= panelColors[i] %>">
+                                 <%= panels[i] %>
+                            </h2>
+                        </div></a>
+                    <% } %>
+        </script>
+        <%- include('partials/ad') %>

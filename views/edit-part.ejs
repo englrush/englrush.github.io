@@ -1,0 +1,64 @@
+<%- include('partials/head') %>
+    <%- include('partials/header') %>
+        <section class="edit-part">
+            <div class="edit-part__inner">
+                <h2 class="edit-part__title">Edit <%= title %></h2>
+                <div class="edit-part__box">
+                    <% let path = title %>
+                    <% if (part.length) { %>
+                        <% part.forEach(({id, title, description, bgColor, btnText} )=> { %>
+                            <form class="grid-item" method="post" action="edit-<%= path %><%= id %>?_method=PUT">  
+                                <div class="level-theme" style="background-color: <%= bgColor %>">
+                                    <input type="hidden" name="bgColor" value="<%= bgColor %>">
+                                    <button type="button" class="bin-link" data-id="<%= id %>"><img class="bin-img" src="images/bin.svg" data-id="<%= id %>"></button>
+                                    <input class="level-theme__input" style="background-color: <%= bgColor %>" type="text" name="title" value="<%= title %>">
+                                </div>
+                                <textarea class="edit-part__textarea" name="description"><%= description %></textarea>
+                                <div class="submit-btns">
+                                    <div class="submit-btn-1">
+                                        <input class="submit-input" type="text" name="btnText" value="<%= btnText %>">
+                                    </div>
+                                    <div class="submit-btn-2">
+                                        <button class="submit-button" type="submit">Edit now</button>
+                                    </div>
+                                </div>
+                            </form>
+                        <% }) %>
+                     <% } %>
+                    <% for(let i = 0; i < colors.length; i++){ %>
+                        <form class="grid-item" method="post">  
+                            <div class="level-theme" style="background-color: <%= colors[i] %>">
+                                <input type="hidden" name="bgColor" value="<%= colors[i] %>">
+                                <button type="button" class="bin-link"><img class="bin-img" src="images/bin.svg"></button>
+                                <input class="level-theme__input" style="background-color: <%= colors[i] %>" type="text" name="title">
+                            </div>
+                            <textarea class="edit-part__textarea" name="description"></textarea>
+                            <div class="submit-btns">
+                                <div class="submit-btn-1">
+                                    <input class="submit-input" type="text" name="btnText">
+                                </div>
+                                <div class="submit-btn-2">
+                                    <button class="submit-button" type="submit">Add now</button>
+                                </div>
+                            </div>
+                        </form>
+                    <% } %>
+                </div>
+            </div>
+        </section>
+        <script>
+            document.addEventListener('click', (e) => {
+                const id = e.target?.dataset?.id || null
+                if (id){
+                    fetch(`/theme${id}`, {
+                        method: 'delete',
+                    })
+                    fetch(`/level${id}`, {
+                        method: 'delete',
+                    }).then(() => {
+                        window.location.reload()
+                    })
+                }
+            })
+        </script>
+        <%- include('partials/ad') %>
