@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const methodOverride = require('method-override')
 const Theme = require('./models/theme')
 const Level = require('./models/level')
+const { render } = require('express/lib/response')
 require('dotenv').config()
 
 const app = express()
@@ -64,7 +65,7 @@ app.get('/edit-levels', (req, res) => {
         .catch((e) => res.send(e))
 })
 
-app.get('/:title', (req, res) => {
+app.get('/theme-:title', (req, res) => {
     const title = req.params.title
     Theme
         .findOne({ title: title })
@@ -84,6 +85,7 @@ app.get('/:title', (req, res) => {
         })
         .catch((e) => res.send(e))
 })
+/////////////////
 
 app.put('/edit-themes:id', (req, res) => {
     const { title, description, bgColor, btnText } = req.body
@@ -134,5 +136,12 @@ app.delete('/level:id', (req, res) => {
         .findByIdAndDelete(req.params.id)
         .then(() => res.sendStatus(200))
         .catch((e) => res.send(e))
+})
+
+app.use((req, res) => {
+    const title = "Error"
+    res
+        .status(400)
+        .render('error', { title })
 })
 
